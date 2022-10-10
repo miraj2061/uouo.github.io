@@ -1,0 +1,540 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* for nav container */
+.topnav{
+  
+    background-color: rgb(84, 124, 129);
+    height:85px;
+    width: 100%;
+    border-bottom: solid;
+    border-width: 1px;
+    
+    /* always set the height of header container otherwise it will flow according to the contains inside it */
+  
+}
+
+
+
+/* for logo */
+span img{
+
+    height:5rem;
+    width: 5rem;
+   
+}
+
+/* for logo text */
+ h1{
+display:inline;
+position:absolute; /* weith respect to body hunxa  */
+top:1.875rem;
+margin-left: 0.3125rem;
+color: white;
+font-size: 220%;
+
+}
+
+/* for main navigation bar */
+
+.mainnav{
+    float:right; /* to display ul box to right side */
+    margin-right: 60px;
+    margin-top: 25px;
+  z-index: 2;
+    
+
+}
+
+
+.mainnav li{
+
+    display: inline-block;   /* to show the all list items in horizontal manner  of ul */
+    padding: 10px;           /* to create space between nav buttons */
+   font-size: larger;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    z-index: 1;  /* to send the body div back (dropdown navigation haru mathi aayo tei vayera) */
+}
+
+/* to remove underline from the link and to set color to text */
+.mainnav li a{
+
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+/* background color of home button (id of list name is active) */
+#active{
+    /* id dida green nai hunxa hover garda ne tara class dida hover anusar change hunxa */
+    background-color: green;
+}
+
+
+
+.mainnav li:hover{
+
+ background-color: rgb(168, 9, 9);
+
+}
+
+/* WORK FOR SECONDARY NAV INSIDE SOCIAL MEDIA */
+
+
+/* secondary nav container vaneko ul ho joslai positioning absolute diye paye afno parent tag {li social media sanga gayera tasinxa tei vara ho */
+
+
+
+
+.secnav{
+    position: absolute;
+    width: 200px; 
+    /* width chai sec nav container lai list ko size jatro banauna deko */
+    background-color: rgb(84, 124, 129); 
+     /* pos relative ko kei arthai hunna absolute ma po tw mother sanga gayera tasinxa tei vayera absolute use gareko yesko mother vaneko 
+     list huna janxa so list lai position relative dine (child div lai absolute garda mother div lai relative garaunu natra tyo body lai afno 
+     mother thamda xa*/
+ 
+     
+    right:0px;
+    left:-55px; /* right top chai secondary nav social nav ko thakkai tala aauna ko lagi gareyeko ho */
+    top:41px;
+    font-size: initial;  /* main parent ko property aquire main social media list ko font size jati nai hunxa */
+    display:none;  
+     /* to hide sec nav*/
+     border-style: solid;
+     border-width: 0.5px;
+     
+
+}
+
+/* social media lai hold garda secondary navigation bar display garna ko lagi */
+.hold1:hover .secnav{
+
+display:block;
+
+
+}
+
+
+
+
+
+
+.secnav li{
+    display:block;
+    /* nav list lai block vertical parna */
+   text-align: center;   /* to align the text inside box center */
+  padding: 10px 25px;
+   
+    }
+    /* for secondary nav lists hover color affect */
+    .secnav li:hover{
+        background-color: rgb(73, 44, 44);
+    }
+    
+    .hold2{
+        position: relative;
+        /* secondary nav ko list (tutorial) block lai mother banauna ani tertiary block lai tesko respect ma move garauna */
+    }
+
+
+
+    /* for tertiary nav */
+    .ternav{
+        position: absolute;
+        width: 180px;
+        right:200px;
+        top:0px;
+        background-color: rgb(84, 124, 129);
+        font-size: initial;
+        display:none;
+        border-style: solid;
+     border-width: 0.5px;
+    }
+
+     /* for secondary nav lists hover color affect */
+    .ternav li:hover{
+
+      background-color: rgb(24, 12, 12);
+    }
+
+    /* tutorials lai hold garda tertiary navigation display garna ko lagi */
+    
+    .hold2:hover .ternav{
+
+display: block;    
+
+    }
+    
+    /* now work for hamburger menu */
+    .fa-bars{
+       
+           /*position: absolute ma float kaam gardina */
+           display: none;
+           float: right;  
+        font-size: 40px;
+          position: relative;
+          right:120px;
+          top: 25px;
+          color: rgb(84, 124, 129);
+     
+    }
+   
+/* for body part */
+
+.bodypart{
+
+    position: relative;
+    /* MAKING MOTHER FOR BODY ELEMENTS */
+
+height:88vh;
+width:100%;
+
+    background-image:  url('bg.jpg');
+    
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+    background-size:auto;
+   
+    }
+
+.bgbody{
+
+    float: right;
+}
+
+
+.bodypart h1{
+
+
+     display:block;
+
+    font-family: 'Alkalami', serif;
+    color: rgb(60, 35, 23);
+    font-weight: bolder;
+    position: absolute;
+    left: 7em;
+    top:4em;
+    font-size:45px;
+
+
+
+
+
+}
+.bodypart p{
+
+position: absolute;
+bottom:8em;
+left: 11.5em;
+font-size:30px ;
+font-family: 'Alkalami', serif;
+color: rgb(26, 5, 51);
+
+    /* for button */
+}
+.letsgo{
+ position: absolute;
+    height: 50px;
+    width: 150px;
+    bottom:125px;
+    left: 570px;
+    background-color: rgb(33, 24, 135);
+   
+    font-family: 'Alkalami', serif;
+    font-size: 25px;
+ padding-top: 0.8125em;
+ border: solid;
+ border-color: azure;
+ border-width: 0.001px;
+ text-align: center;
+
+
+ 
+}
+
+.letsgo {
+
+    text-decoration: none;
+    color: whitesmoke;
+
+}
+.letsgo:hover {
+
+    background-color: rgb(108, 8, 78);
+}
+
+
+
+
+
+    /* for responsive navigation  */
+    @media (max-width:1010px)
+    {
+
+   
+        .fa-bars{
+            display:block;
+            color: black;
+            right:40px;
+           }
+
+    
+
+.mainnav{
+   left:-100%;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    margin-right: 0px;
+    margin-top: 0px;
+    background-color: rgb(37, 17, 63); 
+    transition: top 0.2s;
+   
+    
+
+}
+
+
+
+
+
+
+.mainnav li{
+
+    display:block;   
+    padding: 10px;           
+   font-size: larger;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.secnav{
+    position: relative;
+    width: 100%; 
+    background-color: rgb(84, 124, 129); 
+    left:1px;
+    right:0px; 
+    top:10px;
+    font-size: initial;  
+    display:none;  
+     align-items: center;
+    background-color: rgb(37, 17, 63); 
+    margin-bottom: 10px;
+}
+   
+
+
+    .ternav{
+        position: relative;
+        width: 100%;
+        right:0px;
+        top:10px;
+        background-color: rgb(37, 17, 63);
+        font-size: initial;
+        display:none;
+       
+    }
+
+
+
+
+
+
+
+
+}
+     @media (max-width:530px){
+
+
+        span img{
+           margin-top: 15px;;
+            height:4rem;
+            width: 4rem;
+           
+        }
+
+
+        h1{
+           
+            top:2.9rem;
+            margin-left: 0.3125rem;
+          font-size: 150%;
+            
+            }
+
+            .fa-bars{
+       
+                /*position: absolute ma float kaam gardina */
+               
+                float: right;  
+             font-size: 30px;
+               position: relative;
+               right:13px;
+               top: 36px;
+               color: black;
+          
+         }
+            
+
+
+
+     }
+
+     @media (max-width:290px){
+
+
+
+
+        span img{
+            margin-top: 30px;;
+             height:3rem;
+             width: 3rem;
+
+
+     }
+     h1{
+           
+        top:3.2rem;
+        margin-left: 0.3125rem;
+      font-size: 120%;
+        
+        }
+
+        .fa-bars{
+   
+            /*position: absolute ma float kaam gardina */
+           
+            float: right;  
+         font-size: 20px;
+           position: relative;
+           right:13px;
+           top: 45px;
+           color: black;
+
+      
+     }
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    }
+    /* for mobile devices body responsive part */
+    @media (max-width:1404px)
+    {
+  
+.bgbody{
+
+    float: right;
+   height: 75%;
+   width: 30%;
+   margin-top: 30px;
+}
+
+.bodypart h1{
+
+    left: 7em;
+    top:7em;
+    font-size:35px;
+
+    }
+    .bodypart p{
+
+        bottom:9em;
+        left: 10.5em;
+        font-size:25px ;
+       
+            
+        }
+
+
+        .letsgo{
+           
+               height: 50px;
+               width: 140px;
+               bottom:130px;
+               left: 425px;
+              
+              
+               
+               font-size: 25px;
+            padding-top: 0.8125em;
+         
+           
+            
+           }
+}
+@media (max-width:1148px)
+    {
+
+
+
+        .bodypart p{
+
+            bottom:9em;
+            left: 5.5em;
+            font-size:25px ;
+           
+                
+            }
+    
+    
+            .letsgo{
+               
+                   height: 50px;
+                   width: 140px;
+                   bottom:130px;
+                   left: 320px;
+                  
+                  
+                   
+                   font-size: 25px;
+                padding-top: 0.8125em;
+             
+               
+                
+               }
+
+
+
+               .bodypart h1{
+
+                left: 4em;
+                top:8em;
+                font-size:30px;
+            
+                }
+
+
+
+
+    }

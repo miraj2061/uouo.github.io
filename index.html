@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive nav</title>
+    <link rel="stylesheet" href="navi.css">
+    <script src="https://kit.fontawesome.com/8975936678.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alkalami&family=Anton&family=Dancing+Script:wght@700&family=Lobster&family=Rubik+Moonrocks&family=Sacramento&display=swap" rel="stylesheet">
+
+
+    <script>
+        
+ function menuclicked(){
+
+
+
+
+    if(document.getElementById('on').classList.contains('fa-xmark')){
+
+        document.getElementById('on').classList.remove('fa-xmark');
+        document.getElementById('mainnav').style.left='-100%';
+
+    }
+else{
+    document.getElementById('on').classList.add('fa-xmark');
+    document.getElementById('mainnav').style.left='0%';
+}
+
+
+
+
+
+
+
+
+ }
+
+
+
+
+    </script>
+    
+</head>
+<body>
+    
+
+<nav class="topnav">
+
+<!-- LOGO AND LOGO NAME SECTION -->
+<span>
+
+     <img src="logo1.png">
+     <h1>E-Learn Nepal</h1>
+
+</span>
+<!-- for ham burger menu -->
+<i class="fa-solid fa-bars ham" id="on" onclick="menuclicked()"></i>
+
+
+<!-- NAVIGATION BUTTONS SECTION -->
+<ul class="mainnav" id="mainnav">
+
+    <li id="active"> <a href="#"> HOME</a> </li>
+    <li> <a href="#">CONTACT</a> </li>
+
+    <li class="hold1"> <a href="#">GRADE  ></a> 
+
+        <!-- secondary nav button section -->
+        
+        <ul class="secnav">
+            <li> <a href="#">CLASS 12</a> </li>
+            <li> <a href="#">CLASS 11</a> </li>
+            <li> <a href="#">CLASS 10</a> </li>
+            <li class="hold2"> <a href="#">MODEL QUESTIONS> </a>
+            
+            
+                <ul class="ternav">
+                    <li> <a href="#">PHYSICS</a> </li>
+                    <li> <a href="#">CHEMISTRY</a> </li>
+                    <li> <a href="#">MATH</a> </li>
+                    <li> <a href="#">COMPUTER SCIENCE</a></li>
+                </ul>
+            
+            
+            </li>
+            
+
+        </ul>
+        
+    
+    
+    
+    
+    
+    </li>
+    
+    <li> <a href="#">VIDEOS</a> </li>
+
+
+</ul>
+
+
+
+
+</nav>
+
+<!-- body part -->
+<div class="bodypart">  
+
+<img src="bgbody.png" class="bgbody">
+
+<h1>"WELCOME TO E-LEARN NEPAL"</h1>
+
+<p> HERE WE PROVIDE THE NOTES AND VIDEOS <br> FOR YOU SO STAY CONNECTED WITH US. </p>
+
+<a href="https://www.youtube.com/channel/UCbwrahs6-A4s9MlWFYbHB8g/videos" class="letsgo">LETS GO</a>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
